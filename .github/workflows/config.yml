@@ -1,0 +1,45 @@
+# 刷课模式，默认为3，
+# 1：只刷文章何视频
+# 2：只刷文章和视频和每日答题
+# 3：刷文章和视频和每日答题每周答题和专项答题
+model: 3
+
+# 日志等级
+# panic
+# fatal
+# error
+# warn, warning
+# info
+# debug
+# trace
+log_level: "info"
+
+# 是否显示浏览器
+show_browser: false
+
+# 跳转学习强国的scheme,默认使用本仓库的action自建scheme,若需自行修改，可直接复制仓库下/docs/scheme.html到任意静态文件服务器
+scheme: "https://johlanse.github.io/study_xxqg/scheme.html?"
+
+
+push:
+  ding:
+    enable: false
+    access_token: ""
+    secret: ""
+# 目前仅支持pushplus推送二维码，默认建议使用pushplus推送
+# pushplus使用方法见：http://www.pushplus.plus/
+  push_plus:
+    enable: true
+    token: "8976d7209b3c4e6f9cdafe3f836aeaa9"
+
+# telegram交互模式配置
+tg:
+  enable: false
+  chat_id: 0
+  token: ""
+  proxy: ""
+
+# 设置是否定时执行学习程序，格式为cron格式
+# "9 19 * * *" 每天19点9分执行一次
+# "* 10 * * *” 每天早上十点执行一次
+cron: ""
